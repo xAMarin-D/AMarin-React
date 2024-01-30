@@ -11,7 +11,9 @@ const NavBar = () => {
     <nav className="flex items-center justify-between flex-wrap bg-white p-4 shadow-md">
       {/* Logo a la izquierda */}
       <div className="flex items-center">
+        <a href='App.jsx'> 
         <img src={logoImage} alt="Drip N' Club Logo" className="h-16 w-16 md:h-24 md:w-24" />
+        </a>
       </div>
 
       {/* Centro de la Navbar */}

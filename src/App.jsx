@@ -1,8 +1,8 @@
 import React from 'react';
 import NavBar from './components/Navbar/NavBar';
 import Carrousel from './components/Banner/Carrousel';
-import ItemList from './components/Products/ItemList';
 import ProductSection from './components/ProductAdd/ProductSection';
+import Footer from './components/Footer/Footer';
 
 function App() {
   
@@ -13,6 +13,7 @@ function App() {
       <NavBar cartItemCount={cartItemCount} />
       <Carrousel />
       <ProductSection />
+      <Footer />
     
       {/* ...otros componentes */}
     </div>
