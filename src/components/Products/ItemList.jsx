@@ -20,8 +20,7 @@ const ItemList = () => {
     { id: 6, title: 'Air Force 1 Nike Hombre Borgoña', price: '$112.990', image: ImgPrd6 },
     { id: 7, title: 'Dunk Low Nike Hombre Borgoña', price: '$87.990', image: ImgPrd7 },
     { id: 8, title: 'Air 2 Retro Low Nike Negro/Verde/Rojo', price: '$259.999', image: ImgPrd8 },
-    { id: 9, title: 'New Balance 990v6 Hombre Negro/Gris', price: '$56.990', image: ImgPrd9 },
-    {/* Add More Products */}
+    { id: 9, title: 'New Balance 990v6 Hombre Negro/Gris', price: '$56.990', image: ImgPrd9 }
   ];
 
   return (
