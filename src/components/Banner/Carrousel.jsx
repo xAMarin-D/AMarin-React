@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-// Asumiendo que tienes algunas imágenes en la carpeta src/assets/img/
+{/* Import Img from assets */}
 import image1 from '../../assets/img/carrousel-2.jpg';
 import image2 from '../../assets/img/carrousel-3.jpg';
 import image3 from '../../assets/img/carrousel-1.jpg';
@@ -8,7 +8,8 @@ import image3 from '../../assets/img/carrousel-1.jpg';
 const Carrousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const images = [image1, image2, image3];
-  const delay = 5000; // 5 segundos entre cambios de slide
+  {/* Slide Timer */}
+  const delay = 5000; 
 
   useEffect(() => {
     const timer = setTimeout(() => {

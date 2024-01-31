@@ -15,7 +15,7 @@ function App() {
       <ProductSection />
       <Footer />
     
-      {/* ...otros componentes */}
+      {/* Add more components :D */}
     </div>
   );
 }

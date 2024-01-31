@@ -1,4 +1,3 @@
-// ItemList.jsx
 import React from 'react';
 import ImgPrd1 from '../../assets/img/prd1.jpg';
 import ImgPrd2 from '../../assets/img/prd2.jpg';
@@ -22,7 +21,7 @@ const ItemList = () => {
     { id: 7, title: 'Dunk Low Nike Hombre Borgoña', price: '$87.990', image: ImgPrd7 },
     { id: 8, title: 'Air 2 Retro Low Nike Negro/Verde/Rojo', price: '$259.999', image: ImgPrd8 },
     { id: 9, title: 'New Balance 990v6 Hombre Negro/Gris', price: '$56.990', image: ImgPrd9 },
-    // Añadir más productos según sea necesario
+    {/* Add More Products */}
   ];
 
   return (
@@ -32,13 +31,13 @@ const ItemList = () => {
           key={product.id}
           className="bg-white p-6 rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
         >
-          {/* Contenedor de la imagen */}
+          {/* Img Container*/}
           <div className="flex justify-center items-center h-80">
             <img src={product.image} alt={product.title} className="object-contain max-h-full max-w-full" />
           </div>
           <h3 className="text-lg font-bold mb-2">{product.title}</h3>
           <p className="text-gray-600">{product.price}</p>
-          {/* Otros detalles o botones pueden añadirse aquí */}
+          {/* More details for the future */}
         </div>
       ))}
     </div>

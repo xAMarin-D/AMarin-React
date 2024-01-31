@@ -4,19 +4,19 @@ import CartWidget from '../Cart/CartWidget';
 
 
 const NavBar = () => {
-  // Supongamos que este es el número de productos en el carrito
+  {/* Cart Number*/}
   const cartItemCount = 5;
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-white p-4 shadow-md">
-      {/* Logo a la izquierda */}
+      {/* Left Logo */}
       <div className="flex items-center">
         <a href='App.jsx'> 
         <img src={logoImage} alt="Drip N' Club Logo" className="h-16 w-16 md:h-24 md:w-24" />
         </a>
       </div>
 
-      {/* Centro de la Navbar */}
+      {/* NavBar Center */}
       <div className="hidden md:flex grow items-center justify-center space-x-4">
         <a href="#arrivals" className="text-black hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out transform hover:scale-110">
           Arrivals
@@ -35,7 +35,7 @@ const NavBar = () => {
         </a>
       </div>
 
-      {/* Carrito de compra a la derecha, usando CartWidget */}
+      {/* Cart Right using Cart Component*/}
       <CartWidget cartItemCount={cartItemCount} />
     </nav>
   );

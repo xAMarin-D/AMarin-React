@@ -1,5 +1,4 @@
 
-// ProductSection.jsx
 import React from 'react';
 import ItemList from '../Products/ItemList';
 
