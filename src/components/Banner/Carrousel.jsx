@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
 
-{/* Import Img from assets */}
 import image1 from '../../assets/img/carrousel-2.jpg';
 import image2 from '../../assets/img/carrousel-3.jpg';
 import image3 from '../../assets/img/carrousel-1.jpg';
+import React, { useState, useEffect } from 'react';
+
+
 
 const Carrousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
