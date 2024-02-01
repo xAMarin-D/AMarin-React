@@ -1,4 +1,3 @@
-import React from 'react';
 import ImgPrd1 from '../../assets/img/prd1.jpg';
 import ImgPrd2 from '../../assets/img/prd2.jpg';
 import ImgPrd3 from '../../assets/img/prd3.jpg';
@@ -8,6 +7,7 @@ import ImgPrd6 from '../../assets/img/prd6.jpg';
 import ImgPrd7 from '../../assets/img/prd7.jpg';
 import ImgPrd8 from '../../assets/img/prd8.jpg';
 import ImgPrd9 from '../../assets/img/prd9.jpg';
+import React from 'react';
 
 
 const ItemList = () => {
@@ -30,13 +30,12 @@ const ItemList = () => {
           key={product.id}
           className="bg-white p-6 rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
         >
-          {/* Img Container*/}
           <div className="flex justify-center items-center h-80">
             <img src={product.image} alt={product.title} className="object-contain max-h-full max-w-full" />
           </div>
           <h3 className="text-lg font-bold mb-2">{product.title}</h3>
           <p className="text-gray-600">{product.price}</p>
-          {/* More details for the future */}
+          
         </div>
       ))}
     </div>

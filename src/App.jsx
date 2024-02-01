@@ -3,6 +3,7 @@ import NavBar from './components/Navbar/NavBar';
 import Carrousel from './components/Banner/Carrousel';
 import ProductSection from './components/ProductAdd/ProductSection';
 import Footer from './components/Footer/Footer';
+import WelcomePopup from './components/PopUp/WelcomePopup';
 
 function App() {
   
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <div className="App">
+      <WelcomePopup />
       <NavBar cartItemCount={cartItemCount} />
       <Carrousel />
       <ProductSection />
