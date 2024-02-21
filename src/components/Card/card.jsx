@@ -2,26 +2,32 @@ import React from "react";
 
 const ProductCard = ({ product, onAddToCart }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white m-4">
-      <img className="w-full" src={product.image} alt={product.title} />
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{product.title}</div>
-        <p className="text-gray-700 text-base">{product.description}</p>
-      </div>
-      <div className="px-6 pt-4 pb-2">
-        <span className="text-gray-500 line-through">{product.price}</span>
-        <span className="text-gray-900 font-bold">{product.discountPrice}</span>
-        <span className="text-red-600 font-bold">
-          {product.discountPercentage}
-        </span>
-      </div>
-      <div className="px-6 pt-4 pb-2">
-        <button
-          onClick={() => onAddToCart(product)}
-          className="bg-purple-600 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded"
-        >
-          Agregar al carro
-        </button>
+    <div className="container mx-auto mt-10 flex justify-center items-center">
+      <div className="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden w-full md:max-w-4xl">
+        <div className="md:w-1/2">
+          <img
+            className="object-contain h-auto w-full"
+            src={product.image}
+            alt={product.title}
+          />
+        </div>
+        <div className="w-full md:w-1/2 p-4 flex flex-col">
+          <h2 className="text-2xl font-bold mb-2">{product.title}</h2>
+          <p className="text-gray-700 mb-4">
+            {product.description || "No hay descripción disponible."}
+          </p>
+          <div className="flex-1 flex flex-col justify-end">
+            <div className="mb-10">
+              <div className="text-xl mb-2 font-bold">{product.price}</div>
+            </div>
+            <button
+              onClick={() => onAddToCart(product)}
+              className="bg-purple-600 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded"
+            >
+              Agregar al carro
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

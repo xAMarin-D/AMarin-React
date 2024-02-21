@@ -14,18 +14,24 @@ const products = [
     title: "Air Force Nike Unisex Blanco/Gris",
     price: "$99.900",
     image: ImgPrd1,
+    description:
+      "Redescubre el clásico que nunca pasa de moda con estas Air Force Nike en un elegante tono blanco con detalles en gris. Este diseño atemporal combina comodidad y estilo, perfecto para completar cualquier look. Su amortiguación superior te mantendrá cómodo a cada paso, mientras que la icónica insignia 'Air' te asegura que tus pies están envueltos en calidad inigualable",
   },
   {
     id: 2,
     title: "Air Max °87 Nike Unisex Blanco/Gris",
     price: "$147.000",
     image: ImgPrd2,
+    description:
+      "Impulsa tu día a día con la revolucionaria comodidad de las Air Max '87 de Nike. Estas zapatillas unisex en tonos blanco y gris no solo te brindan un estilo inconfundible sino que también cuentan con la famosa cápsula de aire visible que redefine lo que significa el confort en movimiento. Ideales para aquellos que buscan una fusión perfecta de soporte y estilo.",
   },
   {
     id: 3,
     title: "Suede Pruma Unisex Negro/Blanco",
     price: "$59.990",
     image: ImgPrd3,
+    description:
+      "Las Suede Pruma son la definición de un clásico urbano. Con una silueta baja y un exterior de ante negro contrastado con la banda icónica de Pruma en blanco, estos zapatos son un básico esencial para cualquier armario. Su diseño versátil se adapta a una variedad de estilos y ocasiones, mientras que la suela robusta promete durabilidad y tracción.",
   },
   {
     id: 4,
