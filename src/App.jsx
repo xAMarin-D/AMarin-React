@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./pages/layout";
 import Home from "./pages/home";
 import Product from "./pages/product";
+import Arrivals from "./pages/arrivals";
 
 import WelcomePopup from "./components/PopUp/WelcomePopup";
 
@@ -16,6 +17,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="product-item" element={<Product />} />
             <Route path="product/:productId" element={<Product />} />
+            <Route path="/arrivals" element={<Arrivals />} />
           </Route>
           <Route path="*" element={<h1>404 no encontrado</h1>} />
         </Routes>

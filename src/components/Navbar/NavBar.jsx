@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   {
-    /* Cart Number*/
   }
   const cartItemCount = 5;
 
@@ -24,12 +23,12 @@ const NavBar = () => {
 
       {/* NavBar Center */}
       <div className="hidden md:flex grow items-center justify-center space-x-4">
-        <a
-          href="#arrivals"
+        <Link
+          to="/Arrivals"
           className="text-black hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out transform hover:scale-110"
         >
           Arrivals
-        </a>
+        </Link>
         <a
           href="#brands"
           className="text-black hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out transform hover:scale-110"
