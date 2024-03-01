@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 function Layout() {
   const cartItemCount = 5;
   return (
-    <div>
+    <div className="flex flex-col min-h-screen justify-between">
       <NavBar cartItemCount={cartItemCount} />
       <Outlet />
       <Footer />
