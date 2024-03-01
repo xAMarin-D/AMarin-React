@@ -6,25 +6,37 @@ import products from "../productData";
 function Product() {
   let { productId } = useParams();
   const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const productData = products.find((p) => p.id === parseInt(productId));
-    setProduct(productData);
+    const fetchProduct = new Promise((resolve) => {
+      setTimeout(() => {
+        const productData = products.find((p) => p.id === parseInt(productId));
+        resolve(productData);
+      }, 100);
+    });
+
+    fetchProduct.then((data) => {
+      setProduct(data);
+      setLoading(false);
+    });
   }, [productId]);
 
+  if (loading) {
+    return <p>Cargando detalles del producto...</p>;
+  }
+
+  if (!product) {
+    return <p>Producto no encontrado</p>;
+  }
+
   return (
-    <div>
-      {product ? (
-        <ProductCard
-          product={product}
-          onAddToCart={() => {
-            /* Funcion Futura */
-          }}
-        />
-      ) : (
-        <p>Cargando producto...</p>
-      )}
-    </div>
+    <ProductCard
+      product={product}
+      onAddToCart={() => {
+        /* Función futura para carrito*/
+      }}
+    />
   );
 }
 

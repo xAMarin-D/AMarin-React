@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import products from "../../productData";
-// Asegúrate de importar tus imágenes correctamente
 
 import ProductCard from "../Card/card";
 
