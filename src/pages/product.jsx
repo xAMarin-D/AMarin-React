@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from "../components/Card/card";
-import products from "../productData";
+import { db } from "../config/firebase";
+import { doc, getDoc } from "firebase/firestore";
 
 function Product() {
   let { productId } = useParams();
@@ -9,17 +10,19 @@ function Product() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchProduct = new Promise((resolve) => {
-      setTimeout(() => {
-        const productData = products.find((p) => p.id === parseInt(productId));
-        resolve(productData);
-      }, 100);
-    });
+    const fetchProduct = async () => {
+      const docRef = doc(db, "productos", productId);
+      const docSnap = await getDoc(docRef);
 
-    fetchProduct.then((data) => {
-      setProduct(data);
+      if (docSnap.exists()) {
+        setProduct({ id: docSnap.id, ...docSnap.data() });
+      } else {
+        console.log("No se encontró el producto!");
+      }
       setLoading(false);
-    });
+    };
+
+    fetchProduct();
   }, [productId]);
 
   if (loading) {
@@ -34,7 +37,7 @@ function Product() {
     <ProductCard
       product={product}
       onAddToCart={() => {
-        /* Función futura para carrito*/
+        /* Función futura para carrito */
       }}
     />
   );

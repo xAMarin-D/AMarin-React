@@ -7,18 +7,18 @@ const ProductCard = ({ product, onAddToCart }) => {
         <div className="md:w-1/2">
           <img
             className="object-contain h-auto w-full"
-            src={product.image}
-            alt={product.title}
+            src={product.Image}
+            alt={product.Title}
           />
         </div>
         <div className="w-full md:w-1/2 p-4 flex flex-col">
-          <h2 className="text-2xl font-bold mb-2">{product.title}</h2>
+          <h2 className="text-2xl font-bold mb-2">{product.Title}</h2>
           <p className="text-gray-700 mb-4">
-            {product.description || "No hay descripción disponible."}
+            {product.Description || "No hay descripción disponible."}
           </p>
           <div className="flex-1 flex flex-col justify-end">
             <div className="mb-10">
-              <div className="text-xl mb-2 font-bold">{product.price}</div>
+              <div className="text-xl mb-2 font-bold">{product.Price}</div>
             </div>
             <button
               onClick={() => onAddToCart(product)}
