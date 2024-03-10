@@ -5,7 +5,7 @@ function Home() {
   return (
     <div>
       <Carrousel />
-      <ProductSection />
+      <ProductSection category="Arrivals" />
     </div>
   );
 }

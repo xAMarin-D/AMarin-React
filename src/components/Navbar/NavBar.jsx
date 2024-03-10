@@ -24,7 +24,7 @@ const NavBar = () => {
       {/* NavBar Center */}
       <div className="hidden md:flex grow items-center justify-center space-x-4">
         <Link
-          to="/Arrivals"
+          to="/arrivals"
           className="text-black hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out transform hover:scale-110"
         >
           Arrivals
@@ -35,18 +35,19 @@ const NavBar = () => {
         >
           Marcas
         </a>
-        <a
-          href="#men"
+        <Link
+          to="/men"
           className="text-black hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out transform hover:scale-110"
         >
           Hombre
-        </a>
-        <a
-          href="#women"
+        </Link>
+        <Link
+          to="/women"
           className="text-black hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out transform hover:scale-110"
         >
           Mujer
-        </a>
+        </Link>
+
         <a
           href="#accessories"
           className="text-black hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out transform hover:scale-110"
