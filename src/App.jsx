@@ -8,6 +8,7 @@ import Arrivals from "./pages/arrivals";
 import WelcomePopup from "./components/PopUp/WelcomePopup";
 import MenCategory from "./pages/men";
 import WmnCategory from "./pages/women";
+import AccCategory from "./pages/accesories";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/arrivals" element={<Arrivals />} />
             <Route path="/men" element={<MenCategory />} />
             <Route path="/women" element={<WmnCategory />} />
+            <Route path="/accesories" element={<AccCategory />} />
           </Route>
           <Route path="*" element={<h1>404 no encontrado</h1>} />
         </Routes>

@@ -29,12 +29,7 @@ const NavBar = () => {
         >
           Arrivals
         </Link>
-        <a
-          href="#brands"
-          className="text-black hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out transform hover:scale-110"
-        >
-          Marcas
-        </a>
+
         <Link
           to="/men"
           className="text-black hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out transform hover:scale-110"
@@ -47,13 +42,12 @@ const NavBar = () => {
         >
           Mujer
         </Link>
-
-        <a
-          href="#accessories"
+        <Link
+          to="/accesories"
           className="text-black hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out transform hover:scale-110"
         >
           Accesorios
-        </a>
+        </Link>
       </div>
 
       {/* Cart Right using Cart Component*/}
