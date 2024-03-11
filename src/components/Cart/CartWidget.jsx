@@ -1,10 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const CartWidget = ({ cartItemCount }) => {
+  const navigate = useNavigate();
+
+  const goToCart = () => {
+    navigate("/cart");
+  };
+
   return (
     <div className="relative">
       {/* Cart Icon */}
-      <button className="text-black hover:text-gray-800">
+      <button onClick={goToCart} className="text-black hover:text-gray-800">
+        {/* SVG del carrito aquí */}
         <svg
           className="w-8 h-8"
           fill="none"
@@ -21,6 +29,7 @@ const CartWidget = ({ cartItemCount }) => {
         </svg>
       </button>
 
+      {/* Contador de ítems */}
       {cartItemCount > 0 && (
         <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-semibold rounded-full px-2 py-1">
           {cartItemCount}

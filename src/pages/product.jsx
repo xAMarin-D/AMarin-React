@@ -33,7 +33,12 @@ function Product({ onAddToCart }) {
     return <p>Producto no encontrado</p>;
   }
 
-  return <ProductCard product={product} onAddToCart={onAddToCart} />;
+  return (
+    <ProductCard
+      product={product}
+      onAddToCart={(product, quantity) => onAddToCart(product, quantity)}
+    />
+  );
 }
 
 export default Product;

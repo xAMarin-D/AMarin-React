@@ -8,12 +8,15 @@ import Arrivals from "./pages/arrivals";
 import MenCategory from "./pages/men";
 import AccCategory from "./pages/accesories";
 import WmnCategory from "./pages/women";
+import Cart from "./pages/cart";
 
 function App() {
   const [cart, setCart] = useState([]);
 
-  const addToCart = (product) => {
-    setCart((currentCart) => [...currentCart, product]);
+  const addToCart = (product, quantity) => {
+    // Crea un nuevo array para los productos a añadir
+    const newItems = Array(quantity).fill(product);
+    setCart((currentCart) => [...currentCart, ...newItems]);
   };
 
   return (
@@ -31,6 +34,7 @@ function App() {
             <Route path="men" element={<MenCategory />} />
             <Route path="women" element={<WmnCategory />} />
             <Route path="accesories" element={<AccCategory />} />
+            <Route path="/cart" element={<Cart cart={cart} />} />
           </Route>
           <Route path="*" element={<h1>404 no encontrado</h1>} />
         </Routes>
