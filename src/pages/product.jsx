@@ -4,7 +4,7 @@ import ProductCard from "../components/Card/card";
 import { db } from "../config/firebase";
 import { doc, getDoc } from "firebase/firestore";
 
-function Product() {
+function Product({ onAddToCart }) {
   let { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -33,14 +33,7 @@ function Product() {
     return <p>Producto no encontrado</p>;
   }
 
-  return (
-    <ProductCard
-      product={product}
-      onAddToCart={() => {
-        /* Función futura para carrito */
-      }}
-    />
-  );
+  return <ProductCard product={product} onAddToCart={onAddToCart} />;
 }
 
 export default Product;

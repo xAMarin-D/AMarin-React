@@ -1,9 +1,10 @@
-import { Outlet } from "react-router-dom";
+// Layout.jsx
+import React from "react";
 import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer/Footer";
+import { Outlet } from "react-router-dom";
 
-function Layout() {
-  const cartItemCount = 5;
+const Layout = ({ cartItemCount }) => {
   return (
     <div className="flex flex-col min-h-screen justify-between">
       <NavBar cartItemCount={cartItemCount} />
@@ -11,6 +12,6 @@ function Layout() {
       <Footer />
     </div>
   );
-}
+};
 
 export default Layout;

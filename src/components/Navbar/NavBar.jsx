@@ -3,11 +3,7 @@ import logoImage from "../../assets/img/Drip.png";
 import CartWidget from "../Cart/CartWidget";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
-  {
-  }
-  const cartItemCount = 5;
-
+const NavBar = ({ cartItemCount }) => {
   return (
     <nav className="flex items-center justify-between flex-wrap bg-white p-4 shadow-md">
       {/* Left Logo */}
