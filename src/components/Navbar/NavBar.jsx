@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const NavBar = ({ cartItemCount }) => {
   return (
     <nav className="flex items-center justify-between flex-wrap bg-white p-4 shadow-md">
-      {/* Left Logo */}
       <div className="flex items-center">
         <Link to="/">
           <img
@@ -17,7 +16,6 @@ const NavBar = ({ cartItemCount }) => {
         </Link>
       </div>
 
-      {/* NavBar Center */}
       <div className="hidden md:flex grow items-center justify-center space-x-4">
         <Link
           to="/arrivals"
@@ -46,7 +44,6 @@ const NavBar = ({ cartItemCount }) => {
         </Link>
       </div>
 
-      {/* Cart Right using Cart Component*/}
       <CartWidget cartItemCount={cartItemCount} />
     </nav>
   );

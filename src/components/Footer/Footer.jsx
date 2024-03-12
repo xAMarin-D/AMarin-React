@@ -5,17 +5,14 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-8 mt-auto">
       <div className="container mx-auto px-4 flex flex-wrap justify-between items-center">
-        {/* Logo Section */}
         <div>
           <img
             src={logoImage}
             alt="Drip N' Club Logo"
             className="h-16 w-auto"
           />{" "}
-          {/* Ajustado a h-16 */}
         </div>
 
-        {/* Help Section */}
         <div>
           <h5 className="uppercase font-bold mb-3">Ayuda</h5>
           <ul>
@@ -27,7 +24,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Information Section */}
         <div>
           <h5 className="uppercase font-bold mb-3">Información</h5>
           <ul>

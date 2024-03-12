@@ -1,16 +1,12 @@
-
-import image1 from '../../assets/img/carrousel-2.jpg';
-import image2 from '../../assets/img/carrousel-3.jpg';
-import image3 from '../../assets/img/carrousel-1.jpg';
-import React, { useState, useEffect } from 'react';
-
-
+import image1 from "../../assets/img/carrousel-2.jpg";
+import image2 from "../../assets/img/carrousel-3.jpg";
+import image3 from "../../assets/img/carrousel-1.jpg";
+import React, { useState, useEffect } from "react";
 
 const Carrousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const images = [image1, image2, image3];
-  {/* Slide Timer */}
-  const delay = 5000; 
+  const delay = 5000;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,10 +19,21 @@ const Carrousel = () => {
 
   return (
     <div className="relative w-full overflow-hidden">
-      <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+      <div
+        className="flex transition-transform duration-700 ease-in-out"
+        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+      >
         {images.map((image, index) => (
-          <div key={index} className="w-full flex-none" style={{ minWidth: '100%' }}>
-            <img src={image} alt={`Slide ${index + 1}`} className="w-full h-auto object-cover" />
+          <div
+            key={index}
+            className="w-full flex-none"
+            style={{ minWidth: "100%" }}
+          >
+            <img
+              src={image}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-auto object-cover"
+            />
           </div>
         ))}
       </div>
@@ -34,7 +41,9 @@ const Carrousel = () => {
         {images.map((_, index) => (
           <button
             key={index}
-            className={`h-3 w-3 rounded-full ${index === currentSlide ? 'bg-blue-600' : 'bg-white'}`}
+            className={`h-3 w-3 rounded-full ${
+              index === currentSlide ? "bg-blue-600" : "bg-white"
+            }`}
             aria-label={`Go to slide ${index + 1}`}
             onClick={() => setCurrentSlide(index)}
           />

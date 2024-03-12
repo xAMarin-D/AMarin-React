@@ -13,8 +13,13 @@ import Cart from "./pages/cart";
 function App() {
   const [cart, setCart] = useState([]);
 
+  const removeFromCart = (itemIndex) => {
+    setCart((currentCart) =>
+      currentCart.filter((item, index) => index !== itemIndex)
+    );
+  };
+
   const addToCart = (product, quantity) => {
-    // Crea un nuevo array para los productos a añadir
     const newItems = Array(quantity).fill(product);
     setCart((currentCart) => [...currentCart, ...newItems]);
   };
@@ -25,6 +30,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout cartItemCount={cart.length} />}>
+            <Route
+              path="/cart"
+              element={
+                <Cart
+                  cart={cart}
+                  setCart={setCart}
+                  removeFromCart={removeFromCart}
+                />
+              }
+            />
             <Route index element={<Home />} />
             <Route
               path="product/:productId"
