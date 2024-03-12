@@ -1,6 +1,6 @@
 import React from "react";
 
-const CartItems = ({ cart, removeFromCart }) => {
+const CartItems = ({ cart, setCart, removeFromCart }) => {
   return (
     <div className="container mx-auto my-8 p-4">
       <h2 className="text-2xl font-bold mb-4">Carrito de Compras</h2>

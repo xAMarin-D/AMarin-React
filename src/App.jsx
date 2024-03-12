@@ -9,6 +9,7 @@ import MenCategory from "./pages/men";
 import AccCategory from "./pages/accesories";
 import WmnCategory from "./pages/women";
 import Cart from "./pages/cart";
+import Checkout from "./pages/checkout";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -50,6 +51,7 @@ function App() {
             <Route path="women" element={<WmnCategory />} />
             <Route path="accesories" element={<AccCategory />} />
             <Route path="/cart" element={<Cart cart={cart} />} />
+            <Route path="checkout" element={<Checkout cart={cart} />} />
           </Route>
           <Route path="*" element={<h1>404 no encontrado</h1>} />
         </Routes>
