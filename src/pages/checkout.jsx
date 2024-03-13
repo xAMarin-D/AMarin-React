@@ -13,6 +13,7 @@ const Checkout = ({ cart }) => {
       },
     },
   };
+  
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
@@ -34,7 +35,7 @@ const Checkout = ({ cart }) => {
                   {item.Title} x {item.quantity}
                 </span>
               </div>
-              <span className="ml-4">${item.Price}</span>
+              <span className="ml-4">${(parseFloat(item.Price) * item.quantity).toFixed(3)}</span>
             </li>
           ))}
         </ul>
